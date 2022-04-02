@@ -1,6 +1,11 @@
 public class Composition {
-    private final Tank battleTank = new Tank();
-    private final Gun battleArtillery = new Gun();
+    private Tank battleTank;
+    private Gun battleArtillery;
+
+    Composition(){
+        this.battleArtillery = new Gun();
+        this.battleTank = new Tank();
+    }
 
     void fire() {
         battleTank.fire();
