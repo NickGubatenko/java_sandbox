@@ -1,6 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-        Composition army = new Composition();
+        Composition army = new Composition(new Gun(), new Tank());
         army.fire();
     }
 }

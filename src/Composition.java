@@ -2,9 +2,9 @@ public class Composition {
     private Tank battleTank;
     private Gun battleArtillery;
 
-    Composition(){
-        this.battleArtillery = new Gun();
-        this.battleTank = new Tank();
+    Composition(Gun battleArtillery, Tank battleTank){
+        this.battleArtillery = battleArtillery;
+        this.battleTank = battleTank;
     }
 
     void fire() {
