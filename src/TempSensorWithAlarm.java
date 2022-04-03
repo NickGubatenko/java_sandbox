@@ -47,6 +47,12 @@ public class TempSensorWithAlarm {
         }
     }
 
+    // execute run() continuously in thread
+    public void run() {
+        readTemperatureFromSensor();
+        alarmCheck();
+    }
+
     private void readTemperatureFromSensor() {
         // тут как будто происходит чтение физического датчика
         isTempHasBeenRead = true; // установили признак того, что данные считаны
@@ -61,9 +67,5 @@ public class TempSensorWithAlarm {
         }
     }
 
-    // execute run() continuously in thread
-    private void run() {
-        readTemperatureFromSensor();
-        alarmCheck();
-    }
+
 }
